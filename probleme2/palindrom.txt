@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int oglindit(int)
+{
+        _asm
+        {
+                mov eax,[ebp+8]
+                mov ecx,0
+                mov ebx,10
+bucla:
+                cmp eax,0
+                je stop
+                mov edx,0
+                div ebx
+                
+                push eax
+                push edx
+
+                mov eax,10
+                mul ecx
+                mov ecx,eax
+                pop edx
+                add ecx,edx
+                pop eax
+                jmp bucla
+stop:
+                mov eax,ecx
+        }
+}
+
+int main()
+{
+        int nr;
+     cin>>nr;
+	 cout<<oglindit(nr);
+	 cin>>nr;
+        return 0;
+}

@@ -1,0 +1,61 @@
+Laborator 3 	 	 	 
+ Written by Administrator     
+ Monday, 28 February 2011 21:27 
+
+I. Se considera urmatoarele structuri:
+
+ 
+
+struct Str1{
+
+char c;
+
+short s;
+
+int i;
+
+};
+
+ 
+
+struct Str2{
+
+char c;
+
+int i;
+
+short s;
+
+};
+
+ 
+
+Implementati folosind cod Assembly cate trei functii care, primind un parametru de tip short, int sau char, returneaza un obiect de tip Str1, respectiv Str2, ce are membrul de tipul parametrului dat setat corespunzator.
+
+(descarca cod sursa)
+
+ 
+
+II. Se considera urmatoarea structura:
+
+ 
+
+struct Vector{
+
+short nr;
+
+int* v;
+
+};
+
+ 
+
+Scrieti o functie utilizând limbajul Assembly care, primind ca parametru doua referinte la structuri de tip Vector, returneaza o structura de tip Vector ce interclaseaza cei doi parametri.
+
+ 
+
+Ex: v1={1,2,3},v2={4,5,6,7,8}
+
+rezultat: v3={1,4,2,5,3,6,7,8}
+
+(descarca codul sursa)

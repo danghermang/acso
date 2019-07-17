@@ -1,0 +1,48 @@
+Laborator 4 	 	 	 
+ Written by Alex Baetu     
+ Monday, 07 March 2011 20:11 
+
+ 
+Plan:
+
+- clase
+
+- membri de date
+
+- pointerul this
+
+- membri privati si publici; accesul nerestrictionat la membrii privati în ASM si C++
+
+ 
+
+1. Se considera o structura de tip First-In-First-Out definita dupa cum urmeaza:
+
+ 
+
+#define MAX 30
+
+class Coada{
+
+private:
+
+ int nr;
+
+ int tab[MAX];
+
+public:
+
+ Coada();
+
+ void Adauga_1(int el);
+
+ void Adauga_2(int el);
+
+ void Afisare();
+};
+
+ 
+Coada::nr reprezinta numarul elementelor iar Coada::tab este tabloul ce contine elementele strucurii FIFO. Se stie ca adaugarea unui element nou se realizeaza la extremitatea tabloului ce are adresa de memorie mai mare.
+Implementati metodele din codul atasat astfel incat sa se realizeze adaugarea unui element la structura, atat din c/c++ cat si din limbaj de asamblare.
+
+ 
+(descarca cod sursa)

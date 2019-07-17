@@ -1,0 +1,17 @@
+Laborator 2 	 	 	 
+ Written by Administrator     
+ Monday, 28 February 2011 15:17 
+
+Referinte si pointeri
+
+ 
+
+1. Implementa?i o func?ie în limbajul C/C++ care sorteaza un vector de numere intregi primit ca parametru printr-un pointer. Sortarea se va realiza folosind
+
+(Descarca codul sursa)
+
+ 
+
+2. Implementati aceeasi functie, utilizand limbajul de asamblare.
+
+(Descarca codul susa)

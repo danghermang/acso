@@ -1,0 +1,124 @@
+Laborator 7 	 	 	 
+ Written by Alex Baetu     
+ Tuesday, 29 March 2011 03:52 
+
+a. Metode virtuale si VMT;
+
+b. Exercitii recapitulative
+
+ 
+
+a. VMT ~ Virtual Method Table
+
+- este un membru suplimentar - un pointer catre un tablou
+
+- elementele tabloului sunt pointeri - cate unul pentru fiecare metoda virtuala a clasei
+
+- pointerul VMT este situat la inceputul obiectului - deplasament 0 - abia apoi urmeaza membrii de date;
+
+- clasa derivata nu mosteneste si acest membru, insa are propriul VMT;
+
+- VMT e utilizat la apelul metodelor virtuale numai prin pointeri si referinte.
+
+- apelul unei metode virtuale: se preia din VMT pointerul catre metoda virtuala dorita si se face apelul metodei respective;
+
+ -> Observatie: adresa metodei de apelat e stabilita la executie, nu in momentul compilarii.
+
+ 
+
+class A{
+
+ short a1;
+
+ short a2;
+
+ char a3;
+
+ 
+
+public:
+
+ virtual void afisare(){
+
+ cout<<"A\n";
+
+ }
+
+};
+
+ 
+
+class B: public A{
+
+ char b;
+
+ 
+
+public:
+
+ void afisare(){
+
+ cout<<"B\n";
+
+ }
+
+};
+
+ 
+
+class C:public B{
+
+ int c1;
+
+ 
+
+public:
+
+ virtual void afisare(){
+
+ cout<<"C\n";
+
+ }
+
+};
+
+ 
+
+ 
+
+void main(){
+
+ A a,*pb,*pc;
+
+ B b;
+
+ C c;
+
+ 
+
+ pb = (A*)&b;
+
+ pc = (A*)&c;
+
+ 
+
+ a.afisare();//A
+
+ pb->afisare();//B
+
+ pc->afisare();//C
+
+ 
+
+}
+
+(descarcarea acestui cod)
+
+ 
+
+1. Exercitiu: Scrieti in limbaj de asamblare codul ce este echivalent cu apelul urmator: pb->afisare();
+
+ 
+
+b. Exercitii recapitulative: 1 2
+ Last Updated on Tuesday, 29 March 2011 15:03

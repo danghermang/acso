@@ -1,0 +1,39 @@
+Laborator 1 	 	 	 
+ Written by Administrator     
+ Monday, 28 February 2011 14:14 
+a. Functii cu numar variabil de parametri
+
+b. Conversii de tip  pentru tipuri elementare.
+
+ 
+
+a.1 Sa se scrie o func?ie în limbajul C care prime?te un numar variabil de parametri de tip întreg ?i returneaza numarul de elemente impare.
+
+ (Descarca cod sursa)
+
+ 
+
+a.2 Scrieti aceeasi functie, dar de data aceasta folosind doar cod Assembly.
+
+ (Descarca codul susa)
+
+
+
+a.3 Metoda de a determina numarul de parametri a unei func?ii la runtime (testat VS 2008):
+
+_asm{
+
+ mov edx,[ebp+4]//adresa de return a functiei
+
+ movzx edx, byte ptr [edx + 2]//punem in registrul "dl" (numarul de parametri pusi pe stiva)*4
+
+shr edx,2//obtinem numarul de parametri pusi pe stiva
+
+}
+
+ (Descarca codul susa)
+
+
+
+b. Instructiunile MOVSX, MOVZX
+ Last Updated on Tuesday, 15 March 2011 15:00

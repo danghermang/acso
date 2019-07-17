@@ -1,0 +1,75 @@
+Laborator 6 	 	 	 
+ Written by Administrator     
+ Tuesday, 22 March 2011 11:11 
+
+ 
+
+- mostenire
+
+- conversii de tip pentru clase
+
+- mostenire multipla
+
+ 
+
+ 
+
+ 
+
+#include <iostream>
+
+class A{
+
+public:
+
+ int a;
+
+ A(){a=1;}
+
+ void print(){cout<<"A";}
+
+};
+
+ 
+
+class B{
+
+public:
+
+ char b;
+
+ B(){b=2;}
+
+ void print(){cout<<"B";}
+
+};
+
+ 
+
+class AB:public A,public B{
+
+public:
+
+ short c;
+
+ AB(){c=3;}
+
+ void print(){cout<<"AB";}
+
+};
+
+ 
+
+void main()
+
+{
+
+ AB ab;
+
+ std::cout<<(unsigned)&ab.a<<"\n"<<(unsigned)&ab.b<<"\n"<<(unsigned)&ab.c<<"\n"<<sizeof(AB); 
+
+}
+
+ 
+
+1.1 Implementati urmatoarele clase de baza pentru agenda telefonica: Contact, Acquaintance, Friend. Implementati metodele necesare lucrului cu aceste clase, inclusiv metoda afisare care va fi suprascrisa de clasele Acquaintance si Friend.

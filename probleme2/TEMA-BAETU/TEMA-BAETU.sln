@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TEMA-BAETU", "TEMA-BAETU\TEMA-BAETU.vcxproj", "{F3A07728-4621-4EA8-90EC-ED898E62C45D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3A07728-4621-4EA8-90EC-ED898E62C45D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3A07728-4621-4EA8-90EC-ED898E62C45D}.Debug|Win32.Build.0 = Debug|Win32
+		{F3A07728-4621-4EA8-90EC-ED898E62C45D}.Release|Win32.ActiveCfg = Release|Win32
+		{F3A07728-4621-4EA8-90EC-ED898E62C45D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

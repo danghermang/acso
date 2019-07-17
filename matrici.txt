@@ -1,0 +1,37 @@
+
+Radu Iordachioaia
+11:21pm
+Radu Iordachioaia
+banuiesc ca stii cate linii si coloane ai
+vectori stii?
+gen v[5]={1,2,3,4,5}
+mov eax,v
+sau lea eax, v, ca nu mai stiu exact care-i diferenta
+Robert Pamfile
+11:22pm
+Robert Pamfile
+da ma
+lea eax
+ca sa iei vectoru
+faci pointer la vector
+Radu Iordachioaia
+11:23pm
+Radu Iordachioaia
+in fine
+asa
+pai ma
+[eax] e primu element
+[eax + 4] e al doilea
+ma rog, intelegi tu
+Robert Pamfile
+11:23pm
+Robert Pamfile
+da
+Radu Iordachioaia
+11:24pm
+Radu Iordachioaia
+eh
+ca sa ajungi la linia urmatoare
+primu element de pe linia urmatoare inseamna sa treci peste cele 5 din linia atsa
+deci faci [eax + 4*nr coloane]
+asta te duce pe linia urmatoare

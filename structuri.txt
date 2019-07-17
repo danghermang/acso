@@ -1,0 +1,26 @@
+Radu Iordachioaia
+pai vezi ca am pus eu la structuri
+e simplu
+presupunand ca primu parametru e nodul ala
+mov ebx (sau orice plm), [ebp+8]
+iti muta nodul ala
+[ebx] e prima chestie din structura aia, cum e declarata
+daca ai struct nod {int a}
+la [ebx] o sa ai a-ul
+intul
+daca ai dupa {int a; int b}
+Robert Pamfile
+11:20pm
+Robert Pamfile
+aha
+Radu Iordachioaia
+11:20pm
+Radu Iordachioaia
+la [ebx+4] ai b-ul
+daca ai {int a, nod *urm}
+la [ebx+4] ai urm
+si dai un
+mov ebx, [ebx+4]
+si compari ebx cu null
+cam asta-i
+in rest lucrezi normal

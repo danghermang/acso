@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int n;
+int main ()
+{
+cin>>n;
+_asm{
+	mov eax,0;
+	mov ebx,1;
+	mov edx,2;
+	mov ecx,1;
+FIB:add eax,ebx;
+	mov ebx,ecx;
+	mov ecx,eax;
+	add edx,1;
+	cmp edx,n;
+	jbe FIB
+	mov n, eax;
+}
+cout<<n;
+cin>>n;
+
+return 0;
+}

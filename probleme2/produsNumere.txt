@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int n;
+unsigned fact_asm(unsigned n)
+{
+        _asm
+        {
+                push ecx;
+                 cmp n, 1;
+                ja general;
+                 mov EAX, 1;
+                jmp final;
+ general:
+                mov ECX, n;
+                dec ECX;
+                push ECX;
+                call fact_asm;
+                add ESP, 4;
+                mul n;
+ final:         pop ecx;
+        }
+}
+int main ()
+{
+	cin>>n;
+	cout<<fact_asm(n);
+	cin>>n;
+}

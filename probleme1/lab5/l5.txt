@@ -1,0 +1,96 @@
+Laborator 5 	 	 	 
+ Written by Alex Baetu     
+ Sunday, 13 March 2011 08:30 
+
+ 
+
+Recapitulare:
+
+ 
+
+ * functii ce returneaza o structura/tip de baza a carei dimensiune nu depaseste 8 octeti:
+
+ -> partea mai semnificativa in edx iar cea mai putin semnificativa in eax
+
+ * functii ce returneaza o structura de dimensiune mai mare de 8 octeti
+
+ -> se mai transmite un parametru ascuns (nu apare în lista de parametri)
+
+ -> adresa structurii care trebuie completata cu rezultatul(se gaseste la adresa ebp+8)
+
+ 
+
+Ce invatam saptamana asta?
+
+ * apelarea metodelor
+
+ -> numele clasei trebuie sa insoteasca numele metodei
+
+ -> apelantul trebuie sa puna in registrul ecx adresa obiectului curent (pointerul this)
+
+ -> parametrii sunt eliminati automat de pe stiva (nu trebuie sa avem noi grija de asta)
+
+ 
+
+ Exemplu:
+
+ 
+
+ Coada c;
+
+ //c.push(2);
+
+ _asm{
+
+ lea ecx,c
+
+ push dword ptr 2
+
+ call Coada::push
+
+ }
+
+ 
+
+ * valorile returnate
+
+ -> tipuri elementare: se copiaza in eax
+
+ -> in cazul claselor: se returneaza adresa  in care a fost depus rezultatul (chiar daca dimensiunea clasei nu depaseste 8 octeti)
+
+ 
+
+!Exceptii
+
+ * metodele cu numar variabil de parametri:
+
+ -> adresa obiectului curent (pointerul this) este pus pe stiva, la adresa ebp+8, si nu in ecx
+
+ -> adresa obiectului de returnat este pusa la ebp+12, daca nu este un tip elementar
+
+ -> parametrii de pe stiva nu sunt eliminati automat, ci sunt eliminati de apelant
+
+ * metode statice:
+
+ -> nu se primeste nici un pointer this, deci nu pot fi accesati decat membri statici de date
+
+ -> parametrii sunt eliminati de catre apelant
+Exercitiu: Se da o clasa ce modeleaza o structura de tip LIFO (stiva):
+
+ 
+class Stiva{
+ short nr;
+ int v[MAX];
+public:
+ void push(...);
+ int pop();
+ static Stiva create(...);
+ void afisare();
+};
+
+ 
+Se cere sa se implementeze metodele push, pop, create si constructorul acestei clase in limbaj de asamblare.
+
+ 
+(Descarcare cod sursa)
+ Last Updated on Tuesday, 15 March 2011 15:40
